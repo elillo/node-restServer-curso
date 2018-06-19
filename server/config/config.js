@@ -14,13 +14,13 @@ process.env.NODE_ENV = process.env.NODE_ENV || "dev";
 //=================================
 let urlDB;
 
- /* if(process.env,NODE_ENV === "dev"){ */
+ if(process.env,NODE_ENV === "dev"){
 
     urldb = "mongodb://localhost:27017/cafe";
 
-/* }else{ */
-    urlDB = "mongodb://user_cafe:curso102@ds261470.mlab.com:61470/bebida";
-/*  } */
+}else{
+    urlDB = process.env.MONGOuri;
+ }
 
 process.env.URLDB = urlDB;
 
